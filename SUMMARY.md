@@ -285,14 +285,20 @@
 * [ACLs Exploitation](cheatsheets/acls-exploitation.md)
 * [Abusing ACLs and GPOs Windows & Linux](cheatsheets/abusing-acls-and-gpos-windows-and-linux.md)
 
-## CAPTURE THE FLAG -  TOURNAMENTS
+## CAPTURE THE FLAG - TOURNAMENTS
 
 * [SANS Holiday Hack Challenge 2025](capture-the-flag-tournaments/sans-holiday-hack-challenge-2025.md)
-* [CYBER APOCALYPSE CTF 2025  Tales from Eldoria](capture-the-flag-tournaments/cyber-apocalypse-ctf-2025-tales-from-eldoria.md)
-* [Payatu Hiring CTF 2025 Full Writeup](capture-the-flag-tournaments/payatu-hiring-ctf-2025-full-writeup.md)
+* [CYBER APOCALYPSE CTF 2025 Tales from Eldoria](capture-the-flag-tournaments/cyber-apocalypse-ctf-2025-tales-from-eldoria.md)
+* [GLOBAL CYBER SKILLS BENCHMARK CTF 2025  OPERATION BLACKOUT](capture-the-flag-tournaments/global-cyber-skills-benchmark-ctf-2025-operation-blackout/README.md)
+  * [AI](capture-the-flag-tournaments/global-cyber-skills-benchmark-ctf-2025-operation-blackout/ai.md)
+  * [BLOCKCHAIN](capture-the-flag-tournaments/global-cyber-skills-benchmark-ctf-2025-operation-blackout/blockchain.md)
+  * [CLOUD](capture-the-flag-tournaments/global-cyber-skills-benchmark-ctf-2025-operation-blackout/cloud.md)
+  * [CODING](capture-the-flag-tournaments/global-cyber-skills-benchmark-ctf-2025-operation-blackout/coding.md)
+  * [CRYPTO](capture-the-flag-tournaments/global-cyber-skills-benchmark-ctf-2025-operation-blackout/crypto.md)
 * [INE VulnCorp AI - RedTeam CTF - 2026](capture-the-flag-tournaments/ine-vulncorp-ai-redteam-ctf-2026.md)
+* [Payatu Hiring CTF 2025 Full Writeup](capture-the-flag-tournaments/payatu-hiring-ctf-2025-full-writeup.md)
+* [THM CTF 2025](capture-the-flag-tournaments/thm-ctf-2025.md)
 * [Redfox X CyberStorm CTF 2025](capture-the-flag-tournaments/redfox-x-cyberstorm-ctf-2025.md)
-* [THM CTF 2025 ](capture-the-flag-tournaments/thm-ctf-2025.md)
 
 ## Blogs
 
