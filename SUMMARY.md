@@ -117,6 +117,7 @@
       * [HTB-FIGHTER](hack-the-box-writeups/htb-machines/insane/windows/htb-fighter.md)
       * [HTB-HATHOR](hack-the-box-writeups/htb-machines/insane/windows/htb-hathor.md)
     * [LINUX](hack-the-box-writeups/htb-machines/insane/linux/README.md)
+      * [HTB-SORCERY](hack-the-box-writeups/htb-machines/insane/linux/htb-sorcery.md)
       * [HTB-ZERO(VL)](hack-the-box-writeups/htb-machines/insane/linux/htb-zero-vl.md)
       * [HTB-SKYFALL](hack-the-box-writeups/htb-machines/insane/linux/htb-skyfall.md)
       * [HTB-WHITERABBIT](hack-the-box-writeups/htb-machines/insane/linux/htb-whiterabbit.md)
