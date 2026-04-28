@@ -270,6 +270,16 @@
   * [3. Direct Input Manipulation](ai-red-teaming/pompt-injection-attacks/3.-direct-input-manipulation.md)
   * [4. Indirect Input Manipulation](ai-red-teaming/pompt-injection-attacks/4.-indirect-input-manipulation.md)
   * [5. LLM Jailbreak](ai-red-teaming/pompt-injection-attacks/5.-llm-jailbreak.md)
+* [Red Teaming AI Systems](ai-red-teaming/red-teaming-ai-systems.md)
+* [Reconnaissance for AI Targets](ai-red-teaming/reconnaissance-for-ai-targets/README.md)
+  * [The Setup - Fake Company Scenario](ai-red-teaming/reconnaissance-for-ai-targets/the-setup-fake-company-scenario.md)
+  * [The AI Stack](ai-red-teaming/reconnaissance-for-ai-targets/the-ai-stack.md)
+  * [Active Recon](ai-red-teaming/reconnaissance-for-ai-targets/active-recon.md)
+  * [Model Fingerprinting](ai-red-teaming/reconnaissance-for-ai-targets/model-fingerprinting.md)
+  * [RAG Pipeline Probing](ai-red-teaming/reconnaissance-for-ai-targets/rag-pipeline-probing.md)
+  * [Detection and Evasion](ai-red-teaming/reconnaissance-for-ai-targets/detection-and-evasion.md)
+  * [Honeypot Recognition](ai-red-teaming/reconnaissance-for-ai-targets/honeypot-recognition.md)
+  * [CHEATSHEET](ai-red-teaming/reconnaissance-for-ai-targets/cheatsheet.md)
 
 ## WI-FI PENTING NOTES
 
