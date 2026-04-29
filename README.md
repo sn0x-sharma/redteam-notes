@@ -15,16 +15,13 @@
   Handle   :  sn0x-sharma
   Role     :  Offensive Security Researcher
   Focus    :  Red Teaming | AI Red Teaming
-               Bug Bounty | Pentesting
+              Bug Bounty | Pentesting
   Contact  :  ordern0x@proton.me
-  Status   :  [ breaking things legally ]
 ```
 
 Your friendly neighborhood Offensive Security Researcher and "totally normal" IT guy who spends an _unhealthy_ amount of time breaking into machines.
 
 This isn't a boring archive  it's my brain, dumped into a repo. Every machine broken down step-by-step  not just the **what** but the **why**.
-
-> _Anyone can copy-paste commands._ _Understanding them — **that's where the magic happens.**_
 
 <figure><img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" alt=""><figcaption></figcaption></figure>
 
