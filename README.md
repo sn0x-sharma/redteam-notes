@@ -1,3 +1,9 @@
+---
+cover: >-
+  .gitbook/assets/65deb893dea283b40c838a4d_9f85e4783dcb36ab16c918ad5da3bb59_1709094601_1709095043-ezgif.com-video-to-gif-converter.gif
+coverY: 0
+---
+
 # About
 
 <figure><img src="https://capsule-render.vercel.app/api?type=waving&#x26;color=0:000000,30:0d0d0d,60:001a0d,100:000000&#x26;height=180&#x26;section=header&#x26;text=sn0x-sharma&#x26;fontSize=62&#x26;fontColor=00ff88&#x26;fontAlignY=42&#x26;desc=Offensive%20Security%20%7C%20Red%20Team%20%7C%20AI%20Red%20Teaming&#x26;descSize=15&#x26;descAlignY=65&#x26;descColor=00e5ff&#x26;animation=fadeIn" alt=""><figcaption></figcaption></figure>
