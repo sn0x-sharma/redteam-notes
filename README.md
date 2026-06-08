@@ -1,7 +1,6 @@
 ---
-cover: >-
-  .gitbook/assets/65deb893dea283b40c838a4d_9f85e4783dcb36ab16c918ad5da3bb59_1709094601_1709095043-ezgif.com-video-to-gif-converter.gif
-coverY: 0
+cover: .gitbook/assets/1363139.png
+coverY: 621.7211260353215
 ---
 
 # About
