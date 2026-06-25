@@ -103,6 +103,7 @@
       * [HTB-GHOUL](hack-the-box-writeups/htb-machines/hard/linux/htb-ghoul.md)
   * [INSANE](hack-the-box-writeups/htb-machines/insane/README.md)
     * [WINDOWS](hack-the-box-writeups/htb-machines/insane/windows/README.md)
+      * [HTB-ODYSSEY](hack-the-box-writeups/htb-machines/insane/windows/htb-odyssey.md)
       * [HTB-REAPER(VL)](hack-the-box-writeups/htb-machines/insane/windows/htb-reaper-vl.md)
       * [HTB-INFILTRATOR](hack-the-box-writeups/htb-machines/insane/windows/htb-infiltrator.md)
       * [HTB-MINION](hack-the-box-writeups/htb-machines/insane/windows/htb-minion.md)
