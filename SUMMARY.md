@@ -319,6 +319,13 @@
   * [Honeypot Recognition](ai-red-teaming/reconnaissance-for-ai-targets/honeypot-recognition.md)
   * [CHEATSHEET](ai-red-teaming/reconnaissance-for-ai-targets/cheatsheet.md)
 
+## BB WEB HUNT
+
+* [CRITICAL](bb-web-hunt/critical/README.md)
+  * [SSRF - PII Exfil, Signup DoS, User Deletion & Email Lock](bb-web-hunt/critical/ssrf-pii-exfil-signup-dos-user-deletion-and-email-lock.md)
+  * [CORS Wildcard + JWT Theft = Account Takeover on Every target.com Deployment](bb-web-hunt/critical/cors-wildcard-+-jwt-theft-account-takeover-on-every-target.com-deployment.md)
+* [HIGH](bb-web-hunt/high.md)
+
 ## WI-FI PENTING NOTES
 
 * [WiFi Pentest Concepts](wi-fi-penting-notes/wifi-pentest-concepts.md)
