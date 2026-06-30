@@ -7,7 +7,7 @@ coverY: 621.7211260353215
 
 Ex-boxer turned AI Red Team & Security Researcher. 6 years sharpening attacker instincts, 3 years fighting IT guy who spends an _unhealthy_ amount of time breaking into things.
 
-This isn't a boring archive  it's my brain, dumped into a repo. Every machine broken down step-by-step  not just the **what** but the **why**.<br>
+This isn't a boring archive  it's my brain, dumped into a repo. Every Thing I do is  broken down step-by-step  not just the **what** but the **why**.<br>
 
 ```
 Scanning certification store...
