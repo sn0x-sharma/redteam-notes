@@ -5,37 +5,15 @@ coverY: 621.7211260353215
 
 # About
 
-<figure><img src="https://capsule-render.vercel.app/api?type=waving&#x26;color=0:000000,30:0d0d0d,60:001a0d,100:000000&#x26;height=180&#x26;section=header&#x26;text=sn0x-sharma&#x26;fontSize=62&#x26;fontColor=00ff88&#x26;fontAlignY=42&#x26;desc=Offensive%20Security%20%7C%20Red%20Team%20%7C%20AI%20Red%20Teaming&#x26;descSize=15&#x26;descAlignY=65&#x26;descColor=00e5ff&#x26;animation=fadeIn" alt=""><figcaption></figcaption></figure>
+Ex-boxer turned AI Red Team & Security Researcher. 6 years sharpening attacker instincts, 3 years fighting IT guy who spends an _unhealthy_ amount of time breaking into things.
 
-<figure><img src="https://readme-typing-svg.demolab.com/?font=Share+Tech+Mono&#x26;size=13&#x26;pause=600&#x26;color=FF2D55&#x26;center=true&#x26;vCenter=true&#x26;width=650&#x26;lines=%5BSYS%5D+Initializing+secure+shell...;%5BSYS%5D+Loading+offensive+toolkit...;%5BWARNING%5D+Unauthorized+access+detected...;%5BTRACE%5D+Identifying+source+IP...;%5BTRACE%5D+Source+%3A%3A+sn0x-sharma;%5BACCESS+GRANTED%5D+Welcome+to+the+other+side." alt=""><figcaption></figcaption></figure>
-
-<figure><img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" alt=""><figcaption></figcaption></figure>
-
-### &#x20;`> whoami`
-
-```bash
-┌──(sn0x㉿redteam)-[~]
-└─$ cat identity.txt
-
-  Handle   :  sn0x-sharma
-  Role     :  Offensive Security Researcher
-  Focus    :  Red Teaming | AI Red Teaming
-              Bug Bounty | Pentesting
-  Contact  :  ordern0x@proton.me
-```
-
-Your friendly neighborhood Offensive Security Researcher and "totally normal" IT guy who spends an _unhealthy_ amount of time breaking into machines.
-
-This isn't a boring archive  it's my brain, dumped into a repo. Every machine broken down step-by-step  not just the **what** but the **why**.
-
-<figure><img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" alt=""><figcaption></figcaption></figure>
-
-#### `> ./enum-certs.sh --all`
+This isn't a boring archive  it's my brain, dumped into a repo. Every machine broken down step-by-step  not just the **what** but the **why**.<br>
 
 ```
-[+] Scanning certification store...
+Scanning certification store...
+```
 
-  [COOKING]  OSCP      Offensive Security Certified Professional
+```
   [PWNED]    CPTS      Certified Penetration Testing Specialist
   [PWNED]    CWES      Certified Web Exploitation Specialist
   [PWNED]    CJCA      Certified Junior Cybersecurity Associate
@@ -45,8 +23,6 @@ This isn't a boring archive  it's my brain, dumped into a repo. Every machine br
   [PWNED]    CNSP      Certified Network Security Practitioner
   [PWNED]    RHCSA     Red Hat Certified System Administrator
   [PWNED]    GRC       Governance, Risk & Compliance
-
-[+] 10 owned. 1 cooking.
 ```
 
 ```
@@ -65,8 +41,6 @@ PORT     STATE  SERVICE      VERSION
 <figure><img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" alt=""><figcaption></figcaption></figure>
 
 ***
-
-#### `> tail -f contributions.log`
 
 <div align="center"><img src="https://github-readme-activity-graph.vercel.app/graph?username=sn0x-sharma&#x26;bg_color=0d0d0d&#x26;color=00ff88&#x26;line=ff2d55&#x26;point=00e5ff&#x26;area=true&#x26;area_color=001a0d&#x26;hide_border=true&#x26;custom_title=activity%20log%20%3A%3A%20sn0x-sharma" alt="" width="100%"></div>
 
