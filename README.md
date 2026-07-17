@@ -26,6 +26,32 @@ Scanning certification store...
 ```
 
 ```
+CVE' IDs :
+CVE-2026-57850 - RustDesk Relay Handshake Downgrade
+```
+
+<details>
+
+<summary>Hall Of Fame</summary>
+
+```
+1. WisdomTree
+2. Ghidra (NSA)
+3. McKesson
+4. Chevron
+5. Tesla
+6. Activision Blizzard
+7. LOCUS
+8. CYNICAL
+9. RustDesk
+10. Typmill CMS
+11. PostgreSQL
+12. Hivelocity
+```
+
+</details>
+
+```
 PORT     STATE  SERVICE      VERSION
 ------   -----  -----------  -------------------------------------------
 443/tcp  open   medium       sn0xsharma.medium.com
@@ -43,6 +69,8 @@ PORT     STATE  SERVICE      VERSION
 ***
 
 <div align="center"><img src="https://github-readme-activity-graph.vercel.app/graph?username=sn0x-sharma&#x26;bg_color=0d0d0d&#x26;color=00ff88&#x26;line=ff2d55&#x26;point=00e5ff&#x26;area=true&#x26;area_color=001a0d&#x26;hide_border=true&#x26;custom_title=activity%20log%20%3A%3A%20sn0x-sharma" alt="" width="100%"></div>
+
+
 
 <figure><img src="https://readme-typing-svg.demolab.com/?font=Share+Tech+Mono&#x26;size=15&#x26;pause=1500&#x26;color=00FF88&#x26;center=true&#x26;vCenter=true&#x26;width=650&#x26;lines=%22Anyone+can+copy-paste+commands.%22;%22Understanding+them+--+that%27s+where+the+magic+happens.%22;%5BSESSION+TERMINATED%5D" alt=""><figcaption></figcaption></figure>
 
