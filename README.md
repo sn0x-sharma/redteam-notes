@@ -46,7 +46,6 @@ CVE-2026-57850 - RustDesk Relay Handshake Downgrade
 9. RustDesk
 10. Typmill CMS
 11. PostgreSQL
-12. Hivelocity
 ```
 
 </details>
