@@ -35,8 +35,8 @@ CVE-2026-57850 - RustDesk Relay Handshake Downgrade
 <summary>Hall Of Fame</summary>
 
 ```
-1. WisdomTree
-2. Ghidra (NSA)
+1. Ghidra (NSA)
+2. WisdomTree
 3. McKesson
 4. Chevron
 5. Tesla
