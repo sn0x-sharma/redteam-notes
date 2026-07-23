@@ -322,6 +322,7 @@
 ## BB WEB HUNT
 
 * [CRITICAL](bb-web-hunt/critical/README.md)
+  * [How I Found a 0-Day in Ghidra 12.1.2 , Shared Project File Became a Code Execution Vector.](bb-web-hunt/critical/how-i-found-a-0-day-in-ghidra-12.1.2-shared-project-file-became-a-code-execution-vector..md)
   * [SSRF - PII Exfil, Signup DoS, User Deletion & Email Lock](bb-web-hunt/critical/ssrf-pii-exfil-signup-dos-user-deletion-and-email-lock.md)
   * [CORS Wildcard + JWT Theft = Account Takeover on Every target.com Deployment](bb-web-hunt/critical/cors-wildcard-+-jwt-theft-account-takeover-on-every-target.com-deployment.md)
 * [HIGH](bb-web-hunt/high.md)
