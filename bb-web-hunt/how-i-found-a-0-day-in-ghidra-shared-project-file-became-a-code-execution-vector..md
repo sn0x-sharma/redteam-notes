@@ -1,14 +1,14 @@
 ---
 hidden: true
 icon: skull
-cover: ../../.gitbook/assets/ChatGPT Image Jul 23, 2026, 03_36_43 PM.png
+cover: ../.gitbook/assets/ChatGPT Image Jul 23, 2026, 03_36_43 PM.png
 coverY: 172.01328147885292
 coverHeight: 331
 ---
 
-# How I Found a 0-Day in Ghidra 12.1.2 , Shared Project File Became a Code Execution Vector.
+# How I Found a 0-Day in Ghidra  Shared Project File Became a Code Execution Vector.
 
-<figure><img src="../../.gitbook/assets/ChatGPT Image Jul 23, 2026, 04_52_30 PM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/ChatGPT Image Jul 23, 2026, 04_52_30 PM.png" alt=""><figcaption></figcaption></figure>
 
 ## What If Opening Someone Else's Ghidra Project Could Run Code on Your Machine?
 
@@ -17,10 +17,6 @@ What if I told you that in Ghidra 12.1.2, a reverse engineer could open a projec
 No network connection required. No special privileges needed. No prompt, no warning, no indication anything happened. Just: open project → analysis runs → attacker binary executes.
 
 That's the bug. Let me walk you through how I found it.
-
-{% hint style="info" %}
-At the time of discovery, Ghidra 12.1.2 was the latest stable release shipped June 5, 2026. This vulnerability was reported just one day after release, making it a true 0-day: unknown to the vendor, present in the newest version, unpatched, and with no CVE assigned. Every Ghidra user running 12.1.2 (the current version at the time) was affected. The NSA/Ghidra team accepted the report, fixed it in commit c03a70d, and the patch will ship in 12.1.3 meaning 12.1.2 remains the affected version for all users until that release lands.
-{% endhint %}
 
 ***
 
@@ -78,7 +74,7 @@ The actual process launch is in the sibling file:
 
 Here's the source-to-sink chain. This is the full execution path from config to shell:
 
-<figure><img src="../../.gitbook/assets/image (284).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (284).png" alt=""><figcaption></figcaption></figure>
 
 So Ghidra calls the binary _twice_ once with `--version` to validate it exists, and once during actual symbol demangling. Whatever executable lives at `<swiftToolDir>/swift-demangle` gets run.
 
@@ -90,7 +86,7 @@ No hash check. No signature verification. No integrity check of any kind.
 
 ### The Real Vulnerability: Silent State Restoration
 
-<figure><img src="../../.gitbook/assets/ChatGPT Image Jul 23, 2026, 05_00_38 PM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/ChatGPT Image Jul 23, 2026, 05_00_38 PM.png" alt=""><figcaption></figcaption></figure>
 
 #### This Is the Part That Changes Everything
 
@@ -113,7 +109,7 @@ This means:
 3. The Swift tool directory value is now set **without you ever seeing or configuring it**
 4. When you run analysis, the Swift analyzer launches whatever binary is at that restored path
 
-<figure><img src="../../.gitbook/assets/image (282).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (282).png" alt=""><figcaption></figcaption></figure>
 
 No prompt. No warning. Analysis just runs, and your code runs with it.
 
@@ -1203,7 +1199,7 @@ def _write_fake_demangler(self, fake_tool: Path, marker: Path) -> None:
 
 This directly mirrors the real-world attack:
 
-<figure><img src="../../.gitbook/assets/image (288).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (288).png" alt=""><figcaption></figcaption></figure>
 
 #### Platform Detection - Why It Matters
 
@@ -1304,9 +1300,9 @@ The pushback moment was expected. "Working as intended" is the standard first re
 
 NSA  fix in `c03a70d` restricts the Swift analyzer to only call `swift-demangle` from the system `PATH`, eliminating the configurable tool directory entirely:
 
-<figure><img src="../../.gitbook/assets/image (290).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (290).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (292).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (292).png" alt=""><figcaption></figcaption></figure>
 
 {% embed url="https://github.com/NationalSecurityAgency/ghidra/commit/c03a70d" %}
 
