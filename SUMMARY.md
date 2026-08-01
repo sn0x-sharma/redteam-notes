@@ -157,10 +157,11 @@
 ## BB WEB HUNT
 
 * [CRITICAL](bb-web-hunt/critical/README.md)
+  * [How I Found an SSRF in Mozilla Firefox That  Compromise the Content Pipeline Behind 300M+ New Tab](bb-web-hunt/critical/how-i-found-an-ssrf-in-mozilla-firefox-that-compromise-the-content-pipeline-behind-300m+-new-tab.md)
   * [SSRF - PII Exfil, Signup DoS, User Deletion & Email Lock](bb-web-hunt/critical/ssrf-pii-exfil-signup-dos-user-deletion-and-email-lock.md)
   * [CORS Wildcard + JWT Theft = Account Takeover on Every target.com Deployment](bb-web-hunt/critical/cors-wildcard-+-jwt-theft-account-takeover-on-every-target.com-deployment.md)
 * [HIGH](bb-web-hunt/high.md)
-* [How I Found a 0-Day in Ghidra  Shared Project File Became a Code Execution Vector.](bb-web-hunt/how-i-found-a-0-day-in-ghidra-shared-project-file-became-a-code-execution-vector..md)
+* [How I Found a 0-Day in Ghidra Shared Project File Became a Code Execution Vector.](bb-web-hunt/how-i-found-a-0-day-in-ghidra-shared-project-file-became-a-code-execution-vector..md)
 
 ## HACK THE BOX - WRITEUPS
 
@@ -334,7 +335,7 @@
 
 * [SANS Holiday Hack Challenge 2025](capture-the-flag-tournaments/sans-holiday-hack-challenge-2025.md)
 * [CYBER APOCALYPSE CTF 2025 Tales from Eldoria](capture-the-flag-tournaments/cyber-apocalypse-ctf-2025-tales-from-eldoria.md)
-* [GLOBAL CYBER SKILLS BENCHMARK CTF 2025  OPERATION BLACKOUT](capture-the-flag-tournaments/global-cyber-skills-benchmark-ctf-2025-operation-blackout/README.md)
+* [GLOBAL CYBER SKILLS BENCHMARK CTF 2025 OPERATION BLACKOUT](capture-the-flag-tournaments/global-cyber-skills-benchmark-ctf-2025-operation-blackout/README.md)
   * [AI](capture-the-flag-tournaments/global-cyber-skills-benchmark-ctf-2025-operation-blackout/ai.md)
   * [BLOCKCHAIN](capture-the-flag-tournaments/global-cyber-skills-benchmark-ctf-2025-operation-blackout/blockchain.md)
   * [CLOUD](capture-the-flag-tournaments/global-cyber-skills-benchmark-ctf-2025-operation-blackout/cloud.md)
