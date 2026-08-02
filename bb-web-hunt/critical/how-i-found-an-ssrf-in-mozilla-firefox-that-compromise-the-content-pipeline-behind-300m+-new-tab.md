@@ -1,7 +1,7 @@
 ---
 icon: transporter-1
 cover: ../../.gitbook/assets/ChatGPT Image Aug 1, 2026, 02_06_58 PM.png
-coverY: -250.78149538523274
+coverY: -259.5757239165329
 coverHeight: 207
 ---
 
