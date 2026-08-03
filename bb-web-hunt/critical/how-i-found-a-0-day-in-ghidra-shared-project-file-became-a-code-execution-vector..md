@@ -2,9 +2,8 @@
 description: >-
   CVE-2026-18718 · GHSA-pcfh-853f-q3gh · Ghidra 12.1.2 · Conditional Arbitrary
   Code Execution · CVSS 7.5 High
-hidden: true
 icon: skull
-cover: ../.gitbook/assets/ChatGPT Image Jul 23, 2026, 03_36_43 PM.png
+cover: ../../.gitbook/assets/ChatGPT Image Jul 23, 2026, 03_36_43 PM.png
 coverY: 115.41485470331477
 coverHeight: 371
 ---
@@ -200,7 +199,7 @@ new ProcessBuilder(swiftDemanglerPath.getAbsolutePath(), mangled).start();
 
 The chain:
 
-<figure><img src="../.gitbook/assets/image (449).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (449).png" alt=""><figcaption></figcaption></figure>
 
 No hash check. No signature check. No allowlisted location. No prompt.
 
@@ -210,7 +209,7 @@ At this point I was still thinking "user misconfiguration." Then I checked where
 
 ## The Real Bug: Silent State Restoration
 
-<figure><img src="../.gitbook/assets/image (484).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (484).png" alt=""><figcaption></figcaption></figure>
 
 Here's the part that changes everything.
 
@@ -1437,7 +1436,7 @@ That one line is the whole advisory. Ghidra's _check that the demangler exists_ 
 
 ### Verifying Against Real Ghidra
 
-<figure><img src="../.gitbook/assets/image (509).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (509).png" alt=""><figcaption></figcaption></figure>
 
 The PoC proves the shape. Before filing you verify against the product, or you get "cannot reproduce."
 
@@ -1512,7 +1511,7 @@ The one I led the report with. Set the option, `File → Export Program → Ghid
 
 ### Method 2 -  Whole project directory (`.gpr` + `.rep`)
 
-<figure><img src="../.gitbook/assets/image (493).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (493).png" alt=""><figcaption></figcaption></figure>
 
 Zip the pair and share it. Stronger than Method 1 because you control the entire directory layout, so relative paths become reliable.
 
@@ -1626,9 +1625,9 @@ The pushback was expected. "Working as intended" is the standard first reply to 
 
 `c03a70d` restricts the analyzer to calling `swift` from the system `PATH` and drops the configurable tool directory entirely.
 
-<figure><img src="../.gitbook/assets/image (513).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (513).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (541).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (541).png" alt=""><figcaption></figcaption></figure>
 
 ```java
 // before — attacker-influenceable join
@@ -1648,7 +1647,7 @@ Stuck on an unpatched version? Turn the Swift Demangler analyzer off before open
 
 ### Attack Chain
 
-<figure><img src="../.gitbook/assets/image (436).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (436).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
