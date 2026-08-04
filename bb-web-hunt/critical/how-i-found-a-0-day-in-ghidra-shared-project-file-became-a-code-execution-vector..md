@@ -1653,10 +1653,11 @@ Stuck on an unpatched version? Turn the Swift Demangler analyzer off before open
 
 ### References
 
-Advisory - `https://github.com/NationalSecurityAgency/ghidra/security/advisories/GHSA-pcfh-853f-q3gh`
+* [https://github.com/NationalSecurityAgency/ghidra/security/advisories/GHSA-pcfh-853f-q3gh](https://github.com/NationalSecurityAgency/ghidra/security/advisories/GHSA-pcfh-853f-q3gh)
+* [https://nvd.nist.gov/vuln/detail/CVE-2026-18718](https://nvd.nist.gov/vuln/detail/CVE-2026-18718)
+* [NationalSecurityAgency/ghidra@c03a70d](https://github.com/NationalSecurityAgency/ghidra/commit/c03a70d)
+* [https://app.notion.com/p/Conditional-Arbitrary-Code-Execution-via-Swift-Demangler-Analyzer-ACE-GHIDRA-3a650723849f80679876df165fe4368b](https://app.notion.com/p/Conditional-Arbitrary-Code-Execution-via-Swift-Demangler-Analyzer-ACE-GHIDRA-3a650723849f80679876df165fe4368b)
+* [https://github.com/NationalSecurityAgency/ghidra](https://github.com/NationalSecurityAgency/ghidra)
+* [https://www.vulncheck.com/advisories/ghidra-swift-demangler-analyzer-arbitrary-code-execution-via-project-state](https://www.vulncheck.com/advisories/ghidra-swift-demangler-analyzer-arbitrary-code-execution-via-project-state)
+* [https://github.com/sn0x-sharma/CVE-2026-18718](https://github.com/sn0x-sharma/CVE-2026-18718)
 
-Fix commit -  `https://github.com/NationalSecurityAgency/ghidra/commit/c03a70d`
-
-Security policy - `https://github.com/NationalSecurityAgency/ghidra/security/policy`
-
-CVE -  `CVE-2026-18718`
