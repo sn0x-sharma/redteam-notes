@@ -7,7 +7,7 @@ coverY: 621.7211260353215
 
 Ex-boxer turned AI Red Team & Security Researcher. 6 years sharpening attacker instincts, 3 years fighting IT guy who spends an _unhealthy_ amount of time breaking into things.
 
-This isn't a boring archive  it's my brain, dumped into a repo. Every Thing I do is  broken down step-by-step  not just the **what** but the **why**.<br>
+This isn't a boring archive it's my brain, dumped into a repo. Every Thing I do is broken down step-by-step not just the **what** but the **why**.<br>
 
 ```
 Scanning certification store...
@@ -27,6 +27,7 @@ Scanning certification store...
 
 ```
 CVE' IDs :
+CVE-2026-18718 - Ghidra Swift Demangler Arbitrary Code Execution
 CVE-2026-57850 - RustDesk Relay Handshake Downgrade
 ```
 
@@ -46,6 +47,7 @@ CVE-2026-57850 - RustDesk Relay Handshake Downgrade
 9. RustDesk
 10. Typmill CMS
 11. PostgreSQL
+12. PHP
 ```
 
 </details>
@@ -69,9 +71,6 @@ PORT     STATE  SERVICE      VERSION
 
 <div align="center"><img src="https://github-readme-activity-graph.vercel.app/graph?username=sn0x-sharma&#x26;bg_color=0d0d0d&#x26;color=00ff88&#x26;line=ff2d55&#x26;point=00e5ff&#x26;area=true&#x26;area_color=001a0d&#x26;hide_border=true&#x26;custom_title=activity%20log%20%3A%3A%20sn0x-sharma" alt="" width="100%"></div>
 
-
-
 <figure><img src="https://readme-typing-svg.demolab.com/?font=Share+Tech+Mono&#x26;size=15&#x26;pause=1500&#x26;color=00FF88&#x26;center=true&#x26;vCenter=true&#x26;width=650&#x26;lines=%22Anyone+can+copy-paste+commands.%22;%22Understanding+them+--+that%27s+where+the+magic+happens.%22;%5BSESSION+TERMINATED%5D" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="https://capsule-render.vercel.app/api?type=waving&#x26;color=0:000000,50:001a0d,100:000000&#x26;height=120&#x26;section=footer&#x26;text=Happy+Hacking&#x26;fontSize=20&#x26;fontColor=00ff88&#x26;fontAlignY=70" alt=""><figcaption></figcaption></figure>
-
