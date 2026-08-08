@@ -6,7 +6,7 @@ coverHeight: 252
 
 # About
 
-Ex-boxer turned AI Red Team & Security Researcher. 6 years sharpening attacker instincts, 3 years fighting IT guy who spends an _unhealthy_ amount of time breaking into things.
+Ex-boxer turned AI Red Teamer, Exploit Dev & Web3 Security Researcher. 6 years sharpening attacker instincts, 3 years fighting IT guy who spends an _unhealthy_ amount of time breaking into things.
 
 This isn't a boring archive it's my brain, dumped into a repo. Every Thing I do is broken down step-by-step not just the **what** but the **why**.
 
@@ -27,7 +27,7 @@ This isn't a boring archive it's my brain, dumped into a repo. Every Thing I do 
 
 ### CVE ID's
 
-<table data-view="cards"><thead><tr><th></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td>CVE-2026-18718</td><td><a href=".gitbook/assets/Screenshot 2026-08-08 122145.png">Screenshot 2026-08-08 122145.png</a></td></tr><tr><td>CVE-2026-57850</td><td><a href=".gitbook/assets/Screenshot 2026-08-08 122227.png">Screenshot 2026-08-08 122227.png</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td>CVE-2026-18718 - GHIDRA 73k⭐</td><td><a href=".gitbook/assets/Screenshot 2026-08-08 122145.png">Screenshot 2026-08-08 122145.png</a></td></tr><tr><td>CVE-2026-57850 - RUSTDESK - 119k⭐</td><td><a href=".gitbook/assets/Screenshot 2026-08-08 122227.png">Screenshot 2026-08-08 122227.png</a></td></tr></tbody></table>
 
 ### Projects&#x20;
 
