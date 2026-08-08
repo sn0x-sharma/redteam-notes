@@ -26,35 +26,11 @@ This isn't a boring archive it's my brain, dumped into a repo. Every Thing I do 
 
 ### CVE ID's
 
-```
-CVE-2026-18718 - Ghidra Swift Demangler Arbitrary Code Execution
-CVE-2026-57850 - RustDesk Relay Handshake Downgrade
-```
+<table data-view="cards"><thead><tr><th></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td>CVE-2026-18718</td><td><a href=".gitbook/assets/Screenshot 2026-08-08 122145.png">Screenshot 2026-08-08 122145.png</a></td></tr><tr><td>CVE-2026-57850</td><td><a href=".gitbook/assets/Screenshot 2026-08-08 122227.png">Screenshot 2026-08-08 122227.png</a></td></tr></tbody></table>
 
 ### Secured
 
-<details>
-
-<summary>Hall Of Fame</summary>
-
-```
-1. Ghidra (NSA)
-2. WisdomTree
-3. McKesson
-4. Chevron
-5. Tesla
-6. Activision Blizzard
-7. LOCUS
-8. CYNICAL
-9. RustDesk
-10. Typmill CMS
-11. PostgreSQL
-12. PHP
-```
-
-</details>
-
-<table data-view="cards"><thead><tr><th></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td>GHIDRA</td><td><a href=".gitbook/assets/Screenshot 2026-08-08 114517.png">Screenshot 2026-08-08 114517.png</a></td></tr><tr><td>RUSTDESK</td><td><a href=".gitbook/assets/Screenshot 2026-08-08 114133.png">Screenshot 2026-08-08 114133.png</a></td></tr><tr><td>WISDOMTREE</td><td><a href=".gitbook/assets/WT_logo_square_800x800.jpg">WT_logo_square_800x800.jpg</a></td></tr><tr><td>POSTGRESQL</td><td><a href=".gitbook/assets/Screenshot 2026-08-08 114751.png">Screenshot 2026-08-08 114751.png</a></td></tr><tr><td>TESLA</td><td><a href=".gitbook/assets/Screenshot 2026-08-08 113952.png">Screenshot 2026-08-08 113952.png</a></td></tr><tr><td>ACTIVISION</td><td><a href=".gitbook/assets/Screenshot 2026-08-08 114028.png">Screenshot 2026-08-08 114028.png</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td>GHIDRA</td><td></td><td><a href=".gitbook/assets/Screenshot 2026-08-08 114517.png">Screenshot 2026-08-08 114517.png</a></td></tr><tr><td>RUSTDESK</td><td></td><td><a href=".gitbook/assets/Screenshot 2026-08-08 114133.png">Screenshot 2026-08-08 114133.png</a></td></tr><tr><td>WISDOMTREE</td><td></td><td><a href=".gitbook/assets/WT_logo_square_800x800.jpg">WT_logo_square_800x800.jpg</a></td></tr><tr><td>POSTGRESQL</td><td></td><td><a href=".gitbook/assets/Screenshot 2026-08-08 114751.png">Screenshot 2026-08-08 114751.png</a></td></tr><tr><td>PHP</td><td></td><td><a href=".gitbook/assets/Screenshot 2026-08-08 115400.png">Screenshot 2026-08-08 115400.png</a></td></tr><tr><td>TESLA</td><td></td><td><a href=".gitbook/assets/Screenshot 2026-08-08 115018.png">Screenshot 2026-08-08 115018.png</a></td></tr><tr><td>CHEVRON</td><td></td><td><a href=".gitbook/assets/Screenshot 2026-08-08 115310.png">Screenshot 2026-08-08 115310.png</a></td></tr><tr><td>ACTIVISION BLIZZARD</td><td></td><td><a href=".gitbook/assets/Screenshot 2026-08-08 115137 (1).png">Screenshot 2026-08-08 115137 (1).png</a></td></tr><tr><td>CYNICAL</td><td></td><td><a href=".gitbook/assets/Screenshot 2026-08-08 115928.png">Screenshot 2026-08-08 115928.png</a></td></tr><tr><td></td><td></td><td><a href=".gitbook/assets/Screenshot 2026-08-08 120609.png">Screenshot 2026-08-08 120609.png</a></td></tr></tbody></table>
 
 ### Find Me Here
 
@@ -62,13 +38,4 @@ CVE-2026-57850 - RustDesk Relay Handshake Downgrade
 
 
 
-<div align="center"><img src="https://github-readme-activity-graph.vercel.app/graph?username=sn0x-sharma&#x26;bg_color=0d0d0d&#x26;color=00ff88&#x26;line=ff2d55&#x26;point=00e5ff&#x26;area=true&#x26;area_color=001a0d&#x26;hide_border=true&#x26;custom_title=activity%20log%20%3A%3A%20sn0x-sharma" alt="" width="100%"></div>
-
-***
-
 <figure><img src="https://readme-typing-svg.demolab.com/?font=Share+Tech+Mono&#x26;size=15&#x26;pause=1500&#x26;color=00FF88&#x26;center=true&#x26;vCenter=true&#x26;width=650&#x26;lines=%22Anyone+can+copy-paste+commands.%22;%22Understanding+them+--+that%27s+where+the+magic+happens.%22;%5BSESSION+TERMINATED%5D" alt=""><figcaption></figcaption></figure>
-
-<figure><img src="https://capsule-render.vercel.app/api?type=waving&#x26;color=0:000000,50:001a0d,100:000000&#x26;height=120&#x26;section=footer&#x26;text=Happy+Hacking&#x26;fontSize=20&#x26;fontColor=00ff88&#x26;fontAlignY=70" alt=""><figcaption></figcaption></figure>
-
-
-
