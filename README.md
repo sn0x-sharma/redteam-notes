@@ -14,9 +14,10 @@ This isn't a boring archive it's my brain, dumped into a repo. Every Thing I do 
 ```
   CPTS      Certified Penetration Testing Specialist
   CWES      Certified Web Exploitation Specialist
-  CJCA      Certified Junior Cybersecurity Associate
+  C-ADPenX  Certified Active Directory Pentesting eXpert
   CRTOM     Certified Red Team Operations Management
   EWPTXv2   eLearnSecurity Web App Pentester eXtreme
+  CJCA      Certified Junior Cybersecurity Associate
   CEH v12   Certified Ethical Hacker
   CNSP      Certified Network Security Practitioner
   RHCSA     Red Hat Certified System Administrator
