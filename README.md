@@ -31,7 +31,11 @@ This isn't a boring archive it's my brain, dumped into a repo. Every Thing I do 
 
 ### Projects&#x20;
 
-<table data-view="cards"><thead><tr><th></th><th></th><th data-type="content-ref"></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td>NEMESIS</td><td><strong>A coverage-oriented differential fuzzer for WebAssembly-GC / JavaScript-JIT compilers.</strong> Generates typed Wasm-GC modules, runs them across 8 V8 JIT tiers, and flags any result disagreement as a <strong>real miscompilation</strong> then minimizes it to a clean repro and drafts the report. Finds silent wrong-output bugs <strong>with no crash required</strong> invisible to traditional crash-only fuzzers</td><td><a href="https://github.com/sn0x-sharma/NEMESIS">https://github.com/sn0x-sharma/NEMESIS</a></td><td><a href=".gitbook/assets/Screenshot 2026-08-08 123453.png">Screenshot 2026-08-08 123453.png</a></td></tr></tbody></table>
+{% hint style="info" %}
+**NEMESIS is coverage-oriented differential fuzzer for WebAssembly-GC / JavaScript-JIT compilers.** Generates typed Wasm-GC modules, runs them across 8 V8 JIT tiers, and flags any result disagreement as a **real miscompilation** then minimizes it to a clean repro and drafts the report. Finds silent wrong-output bugs **with no crash required** invisible to traditional crash-only fuzzers
+{% endhint %}
+
+<table data-view="cards"><thead><tr><th></th><th data-type="content-ref"></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td>NEMESIS</td><td><a href="https://github.com/sn0x-sharma/NEMESIS">https://github.com/sn0x-sharma/NEMESIS</a></td><td><a href=".gitbook/assets/Screenshot 2026-08-08 123453.png">Screenshot 2026-08-08 123453.png</a></td></tr></tbody></table>
 
 ### Secured
 
