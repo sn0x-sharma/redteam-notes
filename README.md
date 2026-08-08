@@ -1,6 +1,7 @@
 ---
-cover: .gitbook/assets/1363139.png
-coverY: 621.7211260353215
+cover: .gitbook/assets/backiee-304060-landscape (1).jpg
+coverY: 232.79999999999995
+coverHeight: 252
 ---
 
 # About
