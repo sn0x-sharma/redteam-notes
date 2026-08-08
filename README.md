@@ -54,6 +54,8 @@ CVE-2026-57850 - RustDesk Relay Handshake Downgrade
 
 </details>
 
+<table data-view="cards"><thead><tr><th></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td>GHIDRA</td><td><a href=".gitbook/assets/Screenshot 2026-08-08 114517.png">Screenshot 2026-08-08 114517.png</a></td></tr><tr><td>RUSTDESK</td><td><a href=".gitbook/assets/Screenshot 2026-08-08 114133.png">Screenshot 2026-08-08 114133.png</a></td></tr><tr><td>WISDOMTREE</td><td><a href=".gitbook/assets/WT_logo_square_800x800.jpg">WT_logo_square_800x800.jpg</a></td></tr><tr><td>POSTGRESQL</td><td><a href=".gitbook/assets/Screenshot 2026-08-08 114751.png">Screenshot 2026-08-08 114751.png</a></td></tr><tr><td>TESLA</td><td><a href=".gitbook/assets/Screenshot 2026-08-08 113952.png">Screenshot 2026-08-08 113952.png</a></td></tr><tr><td>ACTIVISION</td><td><a href=".gitbook/assets/Screenshot 2026-08-08 114028.png">Screenshot 2026-08-08 114028.png</a></td></tr></tbody></table>
+
 ### Find Me Here
 
 [![Medium](https://img.shields.io/badge/Medium-sn0xsharma-00ff88?style=for-the-badge\&logo=medium\&color=0d0d0d)](https://sn0xsharma.medium.com) [![LinkedIn](https://img.shields.io/badge/LinkedIn-sn0x--sharma-0077B5?style=for-the-badge\&logo=linkedin\&color=0d0d0d)](https://linkedin.com) [![HackTheBox](https://img.shields.io/badge/HackTheBox-sn0xsharma-9FEF00?style=for-the-badge\&logo=hackthebox\&color=0d0d0d)](https://app.hackthebox.com/users/sn0xsharma) [![TryHackMe](https://img.shields.io/badge/TryHackMe-sn0xsharma-FF2D55?style=for-the-badge\&logo=tryhackme\&color=0d0d0d)](https://tryhackme.com/p/sn0xsharma) [![ProtonMail](https://img.shields.io/badge/ProtonMail-ordern0x-8B89CC?style=for-the-badge\&logo=protonmail\&color=0d0d0d)](mailto:ordern0x@proton.me)
