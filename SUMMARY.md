@@ -164,6 +164,10 @@
   * [SSRF - PII Exfil, Signup DoS, User Deletion & Email Lock](bb-web-hunt/critical/ssrf-pii-exfil-signup-dos-user-deletion-and-email-lock.md)
   * [CORS Wildcard + JWT Theft = Account Takeover on Every target.com Deployment](bb-web-hunt/critical/cors-wildcard-+-jwt-theft-account-takeover-on-every-target.com-deployment.md)
 
+***
+
+* [ZEROGRAVE - POC](https://github.com/sn0x-sharma/ZEROGRAVE)
+
 ## HACK THE BOX - WRITEUPS
 
 * [HTB - MACHINES](hack-the-box-writeups/htb-machines/README.md)
